@@ -23,7 +23,7 @@ class textgenrnn:
             vocab_path = resource_filename(__name__,
                                            'textgenrnn_vocab.json')
 
-        with open(vocab_path, 'r') as json_file:
+        with open(vocab_path, 'r',encoding='utf-8') as json_file:
             self.vocab = json.load(json_file)
 
         self.tokenizer = Tokenizer(filters='', char_level=True)
